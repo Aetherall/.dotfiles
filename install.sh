@@ -20,3 +20,7 @@ chsh -s /bin/zsh
 
 echo "installing starship theme"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
+
+echo "Installing rust"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
