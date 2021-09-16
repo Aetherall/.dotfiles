@@ -1,0 +1,1 @@
+echo "~/.dotfiles/zsh/.zlogin"
