@@ -1,15 +1,26 @@
 # SH
-rm -rf ~/.profile && ln -s ~/.dotfiles/sh/.profile ~/.profile
+rm -rf ~/.profile || true
+ln -s ~/.dotfiles/sh/.profile ~/.profile
 
 # BASH
-rm -rf ~/.bashrc && ln -s ~/.dotfiles/bash/.bashrc ~/.bashrc
-rm -rf ~/.bash_profile && ln -s ~/.dotfiles/bash/.bash_profile ~/.bash_profile
-rm -rf ~/.bash_logout && ln -s ~/.dotfiles/bash/.bash_logout ~/.bash_logout
-rm -rf ~/.bash_login && ln -s ~/.dotfiles/bash/.bash_login ~/.bash_login
+rm -rf ~/.bashrc || true
+ln -s ~/.dotfiles/bash/.bashrc ~/.bashrc
+
+rm -rf ~/.bash_profile || true
+ln -s ~/.dotfiles/bash/.bash_profile ~/.bash_profile
+
+rm -rf ~/.bash_logout || true
+ln -s ~/.dotfiles/bash/.bash_logout ~/.bash_logout
+
+rm -rf ~/.bash_login || true
+ln -s ~/.dotfiles/bash/.bash_login ~/.bash_login
 
 # ZSH
-rm -rf ~/.config/zsh && ln -s ~/.dotfiles/zsh ~/.config/zsh
-rm -rf ~/.zshenv && ln -s ~/.dotfiles/zsh/.zshenv ~/.zshenv
+rm -rf ~/.config/zsh || true
+ln -s ~/.dotfiles/zsh ~/.config/zsh
+
+rm -rf ~/.zshenv || true
+ln -s ~/.dotfiles/zsh/.zshenv ~/.zshenv
 
 # Firefox
 if [ -d "$HOME/.mozilla" ] ; then
