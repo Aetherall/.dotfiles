@@ -24,3 +24,17 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 echo "Installing rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
+echo "Installing alacritty"
+sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 libegl1-mesa-dev gzip
+cargo install alacritty
+
+echo "Installing desktop alacritty"
+mkdir ~/.sources
+git clone https://github.com/alacritty/alacritty.git ~/.sources/alacritty
+sudo cp ~/.sources/alacritty/extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install ~/.sources/alacritty/extra/linux/Alacritty.desktop
+sudo update-desktop-database
+
+echo "Installing alacritty manual"
+sudo mkdir -p /usr/local/share/man/man1
+gzip -c ~/.sources/alacritty/extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null

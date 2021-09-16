@@ -1,5 +1,7 @@
 echo "~/.dotfiles/zsh/.zshrc"
 
+fpath+="$ZDOTDIR/.zsh_functions"
+
 # Set up the prompt
 
 # autoload -Uz promptinit

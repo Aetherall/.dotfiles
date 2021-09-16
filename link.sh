@@ -26,6 +26,10 @@ ln -s ~/.dotfiles/zsh/.zshenv ~/.zshenv
 rm -rf ~/.config/vim || true
 ln -s ~/.dotfiles/vim ~/.config/vim
 
+# Alacritty
+rm -rf ~/.config/alacritty || true
+ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+
 # Firefox
 if [ -d "$HOME/.mozilla" ] ; then
     mv ~/.mozilla ~/.config/mozilla
