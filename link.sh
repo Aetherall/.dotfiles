@@ -16,3 +16,5 @@ if [ -d "$HOME/.mozilla" ] ; then
     mv ~/.mozilla ~/.config/mozilla
 fi
 ln -s ~/.mozilla ~/.config/mozilla
+
+# mv .gnupg/ .local/share/gnupg
