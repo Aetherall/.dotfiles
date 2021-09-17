@@ -38,3 +38,10 @@ sudo update-desktop-database
 echo "Installing alacritty manual"
 sudo mkdir -p /usr/local/share/man/man1
 gzip -c ~/.sources/alacritty/extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+
+echo "Installing Jetbrains font"
+mkdir -p ~/.local/share/fonts
+wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip" -O jetbrainsfont.zip
+unzip jetbrainsfont.zip -d "$HOME/.local/share/fonts"
+rm -f jetbrainsfont.zip
+
