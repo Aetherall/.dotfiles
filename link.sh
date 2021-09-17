@@ -30,6 +30,10 @@ ln -s ~/.dotfiles/vim ~/.config/vim
 rm -rf ~/.config/alacritty || true
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 
+# Starship terminal theme
+rm -rf ~/.config/starship.toml || true
+ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
+
 # Firefox
 if [ -d "$HOME/.mozilla" ] ; then
     mv ~/.mozilla ~/.config/mozilla
