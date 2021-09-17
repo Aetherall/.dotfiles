@@ -45,3 +45,5 @@ wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrains
 unzip jetbrainsfont.zip -d "$HOME/.local/share/fonts"
 rm -f jetbrainsfont.zip
 
+echo "Installing fnm node version manager"
+cargo install fnm
