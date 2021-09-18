@@ -5,3 +5,4 @@ echo "~/.dotfiles/zsh/.zshenv"
 # if [ -f "$HOME/.env.sh" ]; then
 # 	. "$HOME/.env.sh"
 # fi
+. "/home/nicolas/.local/share/cargo/env"

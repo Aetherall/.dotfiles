@@ -13,6 +13,14 @@ setopt histignorealldups sharehistory
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
+# Zinit
+source ~/.config/.zinit/zinit.zsh
+zinit load zdharma/fast-syntax-highlighting 
+zinit load zsh-users/zsh-history-substring-search 
+zinit load zsh-users/zsh-autosuggestions 
+
+#source ~/.config/.zinit/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
 # Keep 1 200 000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1200000
 SAVEHIST=1000000
