@@ -6,6 +6,8 @@ sudo ubuntu-drivers autoinstall
 sudo apt install vim -y
 sudo apt install git -y
 sudo apt install curl -y
+sudo apt install htop -y
+
 sudo snap install --classic code
 
 rm -rf ~/Templates
