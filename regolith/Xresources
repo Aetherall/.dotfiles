@@ -1,0 +1,6 @@
+#include "/etc/regolith/styles/ayu-dark/root"
+
+i3-wm.binding.exit_app: w
+i3-wm.binding.kill_app: Shift+w
+i3-wm.binding.wifi: Shift+Mod1+d
+i3-wm.binding.terminal: Return

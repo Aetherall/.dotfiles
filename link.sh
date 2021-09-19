@@ -34,10 +34,20 @@ ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 rm -rf ~/.config/starship.toml || true
 ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
+# Regolith
+rm -rf ~/.config/regolith || true
+ln -s ~/.dotfiles/regolith ~/.config/regolith
+
+# # X11
+# rm -rf ~/.Xsession || true
+# ln -s ~/.dotfiles/x11/.Xsession ~/.Xsession
+
+# # PICOM (blur)
+# sudo rm /usr/share/regolith-compositor/init || true
+# sudo ln -s ~/.dotfiles/regolith/picom/init /usr/share/regolith-compositor/init
+
 # Firefox
 if [ -d "$HOME/.mozilla" ] ; then
     mv ~/.mozilla ~/.config/mozilla
     ln -s ~/.config/mozilla ~/.mozilla
 fi
-
-# mv .gnupg/ .local/share/gnupg

@@ -7,6 +7,7 @@ sudo apt install vim -y
 sudo apt install git -y
 sudo apt install curl -y
 sudo apt install htop -y
+sudo apt install tmate -y
 
 sudo snap install --classic code
 
@@ -41,11 +42,28 @@ echo "Installing alacritty manual"
 sudo mkdir -p /usr/local/share/man/man1
 gzip -c ~/.sources/alacritty/extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
 
+echo "Use alacritty by default"
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $CARGO_HOME/bin/alacritty 50
+
 echo "Installing Jetbrains font"
 mkdir -p ~/.local/share/fonts
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip" -O jetbrainsfont.zip
 unzip jetbrainsfont.zip -d "$HOME/.local/share/fonts"
 rm -f jetbrainsfont.zip
+gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Regular 10"
+gsettings set org.gnome.desktop.interface document-font-name "JetBrainsMono Nerd Font Regular 10"
+gsettings set org.gnome.desktop.interface monospace-font-name "JetBrainsMono Nerd Font Regular 10"
+
 
 echo "Installing fnm node version manager"
 cargo install fnm
+
+echo "Installing Regolith"
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt install regolith-desktop-mobile -y # or regolith-desktop-standard
+
+echo "Regolith theme"
+sudo apt install regolith-look-ayu-dark -y
+
+echo "GTK theme"
+gsettings set org.gnome.desktop.interface gtk-theme "Ayu-Dark"
