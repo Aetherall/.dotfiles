@@ -647,7 +647,7 @@ bar {
 
 # Start the installed regolith-compositor
 set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/regolith-compositor/init
-exec_always --no-startup-id sh /home/aetherall/.dotfiles/regolith/picom/init
+exec_always --no-startup-id bash ~/.dotfiles/regolith/picom/init
 
 # Start Rofication for notifications
 set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
