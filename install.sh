@@ -81,6 +81,10 @@ gsettings set org.gnome.desktop.interface monospace-font-name "JetBrainsMono Ner
 echo "Installing fnm node version manager"
 cargo install fnm
 
+echo "Installing zinit"
+mkdir ~/.config/.zinit
+git clone https://github.com/zdharma/zinit.git ~/.config/.zinit
+
 echo "Installing Regolith"
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt install regolith-desktop-mobile -y # or regolith-desktop-standard
@@ -93,3 +97,31 @@ gsettings set org.gnome.desktop.interface gtk-theme "Ayu-Dark"
 echo "Installing Vim-plug"
 sudo curl -fLo ~/.config/vim/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+echo "Installing Dockers and its dependencies"
+sudo apt install \
+    apt-transport-https \
+    ca-certificates \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+ echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   
+  sudo apt install docker-ce docker-ce-cli containerd.io
+  sudo usermod -a -G docker $USER
+
+echo "Installing kubectl"
+
+sudo apt install -y apt-transport-https ca-certificates curl
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt update
+sudo apt install -y kubectl
+
+echo "installing gcloud"
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+sudo apt update && sudo apt install google-cloud-sdk
+gcloud init
