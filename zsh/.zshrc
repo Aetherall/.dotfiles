@@ -7,6 +7,7 @@ source ~/.sources/zinit/zinit.zsh
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
 zinit load zsh-users/zsh-history-substring-search
+zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 
 # Use ctrl+UP ctrl+DOWN to navigate history
@@ -18,7 +19,16 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^E" edit-command-line
 
-setopt histignorealldups sharehistory
+setopt histignorealldups
+setopt sharehistory
+setopt appendhistory
+setopt histfindnodups
+setopt incappendhistory
+setopt histreduceblanks
+setopt correct
+setopt correctall
+setopt globcomplete
+setopt nocaseglob
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -49,8 +59,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-
 
 eval "$(fnm env)"
 eval "$(starship init zsh)"
