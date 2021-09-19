@@ -67,3 +67,6 @@ sudo apt install regolith-look-ayu-dark -y
 
 echo "GTK theme"
 gsettings set org.gnome.desktop.interface gtk-theme "Ayu-Dark"
+
+echo "installing zinit"
+git clone https://github.com/zdharma/zinit.git ~/.sources/zinit

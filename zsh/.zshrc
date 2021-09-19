@@ -2,6 +2,12 @@ echo "~/.dotfiles/zsh/.zshrc"
 
 fpath+="$ZDOTDIR/.zsh_functions"
 
+source ~/.sources/zinit/zinit.zsh
+
+# Two regular plugins loaded without investigating.
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
+
 # Set up the prompt
 
 # autoload -Uz promptinit
@@ -39,6 +45,8 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+
 
 eval "$(fnm env)"
 eval "$(starship init zsh)"
