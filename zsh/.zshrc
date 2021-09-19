@@ -14,6 +14,10 @@ zinit light zdharma/fast-syntax-highlighting
 bindkey '^[[1;5A' history-substring-search-up
 bindkey '^[[1;5B' history-substring-search-down
 
+# Use ctrl+LEFT ctrl+RIGHT to move word by word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Use ctrl+e for open current command in editor
 autoload -z edit-command-line
 zle -N edit-command-line
