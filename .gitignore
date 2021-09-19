@@ -3,3 +3,4 @@ zsh/.zcompdump
 zsh/.zsh_history
 regolith/picom/errors
 regolith/picom/logs
+regolith/flags
