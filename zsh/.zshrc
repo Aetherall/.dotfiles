@@ -6,7 +6,12 @@ source ~/.sources/zinit/zinit.zsh
 
 # Two regular plugins loaded without investigating.
 zinit light zsh-users/zsh-autosuggestions
+zinit load zsh-users/zsh-history-substring-search
 zinit light zdharma/fast-syntax-highlighting
+
+# Use ctrl+UP ctrl+DOWN to navigate history
+bindkey '^[[1;5A' history-substring-search-up
+bindkey '^[[1;5B' history-substring-search-down
 
 # Set up the prompt
 
