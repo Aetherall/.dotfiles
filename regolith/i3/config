@@ -547,7 +547,7 @@ focus_follows_mouse $i3-wm.gaps.focus_follows_mouse
 ###############################################################################
 
 # Create variables from Xresources for i3's look.
-set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
+set_from_resource $focused.color.border i3-wm.client.focused.color.border "#ff0000"
 set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
 set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
 set_from_resource $focused.color.indicator i3-wm.client.focused.color.indicator "#268bd2"
@@ -647,7 +647,7 @@ bar {
 
 # Start the installed regolith-compositor
 set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/regolith-compositor/init
-exec_always --no-startup-id sh /home/aetherall/.dotfiles/regolith/picom/init
+exec_always --no-startup-id bash ~/.dotfiles/regolith/picom/init
 
 # Start Rofication for notifications
 set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
