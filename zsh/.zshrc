@@ -10,19 +10,6 @@ zinit load zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 
-# Use ctrl+UP ctrl+DOWN to navigate history
-bindkey '^[[1;5A' history-substring-search-up
-bindkey '^[[1;5B' history-substring-search-down
-
-# Use ctrl+LEFT ctrl+RIGHT to move word by word
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-
-# Use ctrl+e for open current command in editor
-autoload -z edit-command-line
-zle -N edit-command-line
-bindkey "^E" edit-command-line
-
 setopt histignorealldups
 setopt sharehistory
 setopt appendhistory
@@ -33,9 +20,6 @@ setopt correct
 setopt correctall
 setopt globcomplete
 setopt nocaseglob
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 # Keep 1 200 000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1200000
@@ -63,6 +47,22 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+
+# Use ctrl+UP ctrl+DOWN to navigate history
+bindkey '^[[1;5A' history-substring-search-up
+bindkey '^[[1;5B' history-substring-search-down
+
+# Use ctrl+LEFT ctrl+RIGHT to move word by word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# Use ctrl+e for open current command in editor
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^E" edit-command-line
+
+
 
 eval "$(fnm env)"
 eval "$(starship init zsh)"
