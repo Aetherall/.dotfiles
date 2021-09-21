@@ -121,3 +121,7 @@ fi
 
 eval "$(fnm env)"
 eval "$(starship init bash)"
+
+if [ -f "$HOME/.dotfiles/private/aliases.bash" ]; then
+  . "$HOME/.dotfiles/private/aliases.bash";
+fi

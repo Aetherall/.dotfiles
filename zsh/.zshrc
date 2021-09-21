@@ -66,3 +66,7 @@ bindkey "^E" edit-command-line
 
 eval "$(fnm env)"
 eval "$(starship init zsh)"
+
+if [ -f "$HOME/.dotfiles/private/aliases.bash" ]; then
+  . "$HOME/.dotfiles/private/aliases.bash";
+fi
