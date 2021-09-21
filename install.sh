@@ -94,4 +94,5 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo "installing helmenv helm version manager"
+sudo apt install jq -y
 git clone https://github.com/alexppg/helmenv.git ~/.local/share/helm
