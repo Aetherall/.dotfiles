@@ -16,8 +16,6 @@ setopt appendhistory
 setopt histfindnodups
 setopt incappendhistory
 setopt histreduceblanks
-setopt correct
-setopt correctall
 setopt globcomplete
 setopt nocaseglob
 

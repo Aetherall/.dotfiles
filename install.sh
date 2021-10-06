@@ -3,20 +3,19 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 sudo apt autoremove -y
 sudo ubuntu-drivers autoinstall
-sudo apt install vim -y
-sudo apt install git -y
-sudo apt install curl -y
-sudo apt install htop -y
-sudo apt install tmate -y
+
+sudo apt -y install vim git curl \
+  htop tmate zsh cmake pkg-config \
+  libfreetype6-dev libfontconfig1-dev \
+  libxcb-xfixes0-dev libxkbcommon-dev \
+  python3 libegl1-mesa-dev gzip \
+  apt-transport-https ca-certificates \
+  curl gnupg lsb-release zsh
 
 sudo snap install --classic code
 
 rm -rf ~/Templates
-rm -rf ~/Pictures
-rm -rf ~/Videos
 rm -rf ~/Desktop
-
-sudo apt install zsh -y
 
 echo "changing default shell to zsh, please authorize"
 chsh -s /bin/zsh
@@ -28,7 +27,6 @@ echo "Installing rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 echo "Installing alacritty"
-sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 libegl1-mesa-dev gzip
 cargo install alacritty
 
 echo "Installing desktop alacritty"
@@ -60,10 +58,7 @@ cargo install fnm
 
 echo "Installing Regolith"
 sudo add-apt-repository ppa:regolith-linux/release
-sudo apt install regolith-desktop-mobile -y # or regolith-desktop-standard
-
-echo "Regolith theme"
-sudo apt install regolith-look-ayu-dark -y
+sudo apt install regolith-desktop-mobile regolith-look-ayu-dark -y # or regolith-desktop-standard
 
 echo "GTK theme"
 gsettings set org.gnome.desktop.interface gtk-theme "Ayu-Dark"
@@ -72,11 +67,10 @@ echo "installing zinit"
 git clone https://github.com/zdharma/zinit.git ~/.sources/zinit
 
 echo "installing docker"
-sudo apt install -y apt-transport-https ca-certificates curl gnupg lsb-release
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt update
+sudo apt update -y
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
@@ -94,5 +88,4 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo "installing helmenv helm version manager"
-sudo apt install jq -y
 git clone https://github.com/alexppg/helmenv.git ~/.local/share/helm
