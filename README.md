@@ -3,7 +3,7 @@
 ## How to use ?
 
 ```
-curl https://raw.githubusercontent.com/Aetherall/.dotfiles/main/auto-install.sh | sudo sh
+curl https://raw.githubusercontent.com/Aetherall/.dotfiles/main/auto-install.sh | sh
 ```
 
 ## TODO
