@@ -2,8 +2,15 @@
 
 ## How to use ?
 
+open a terminal and paste this:
+
 ```
-curl https://raw.githubusercontent.com/Aetherall/.dotfiles/main/auto-install.sh | sh
+sudo apt install git curl -y
+git clone https://github.com/Aetherall/.dotfiles ~/.dotfiles
+cd ~/.dotfiles
+source .env
+sh link.sh
+sh install.sh | tee -a ~/.dotfiles/install.log
 ```
 
 ## TODO
@@ -38,4 +45,5 @@ curl https://raw.githubusercontent.com/Aetherall/.dotfiles/main/auto-install.sh 
 - [ ] nnn
 
 ### Fix for dell XPS 15 7590
+
 /boot/grub/grub.cfg => add i915.edp_vswing=2 acpi=force

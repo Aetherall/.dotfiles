@@ -15,7 +15,7 @@ sudo apt -y install vim git curl \
 sudo snap install --classic code
 
 rm -rf ~/Templates
-rm -rf ~/Desktop
+#rm -rf ~/Desktop
 
 echo "changing default shell to zsh, please authorize"
 chsh -s /bin/zsh
@@ -58,13 +58,13 @@ cargo install fnm
 
 echo "Installing Regolith"
 sudo add-apt-repository ppa:regolith-linux/release
-sudo apt install regolith-desktop-mobile regolith-look-ayu-dark -y # or regolith-desktop-standard
+sudo apt install regolith-desktop-mobile -y # or regolith-desktop-standard
 
-echo "GTK theme"
-gsettings set org.gnome.desktop.interface gtk-theme "Ayu-Dark"
+#echo "GTK theme" waiting for ayu to be fixed before applying theme u.u
+#gsettings set org.gnome.desktop.interface gtk-theme "Ayu-Dark"
 
 echo "installing zinit"
-git clone https://github.com/zdharma/zinit.git ~/.sources/zinit
+git clone https://github.com/zdharma-continuum/zinit.git ~/.sources/zinit
 
 echo "installing docker"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

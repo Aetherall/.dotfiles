@@ -8,7 +8,7 @@ source ~/.sources/zinit/zinit.zsh
 zinit light zsh-users/zsh-autosuggestions
 zinit load zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-completions
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 setopt histignorealldups
 setopt sharehistory
