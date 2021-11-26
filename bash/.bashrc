@@ -125,3 +125,7 @@ eval "$(starship init bash)"
 if [ -f "$HOME/.dotfiles/private/aliases.bash" ]; then
   . "$HOME/.dotfiles/private/aliases.bash";
 fi
+
+if [ -f "$HOME/.dotfiles/aliases.bash" ]; then
+  . "$HOME/.dotfiles/aliases.bash";
+fi
