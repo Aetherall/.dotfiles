@@ -9,8 +9,8 @@ while [ ! -z "$compositor_PID" ]; do
   compositor_PID=$(pidof picom)
 done
 
-if [[ -f "$HOME/.config/regolith/picom/config" ]]; then
-  /usr/bin/picom --experimental-backends --backend glx --config "$HOME/.config/regolith/picom/config" 2> "$HOME/.dotfiles/regolith/picom/errors" > "$HOME/.dotfiles/regolith/picom/logs"
-else
-  /usr/bin/picom --config /etc/regolith/picom/config
-fi
+#if [[ -f "$HOME/.config/regolith/picom/config" ]]; then
+#/usr/bin/picom --experimental-backends --backend glx --config "$HOME/.config/regolith/picom/config" 2> "$HOME/.dotfiles/regolith/picom/errors" > "$HOME/.dotfiles/regolith/picom/logs"
+#else
+#/usr/bin/picom --config /etc/regolith/picom/config
+#fi
