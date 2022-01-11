@@ -126,6 +126,10 @@ if [ -f "$HOME/.dotfiles/private/aliases.bash" ]; then
   . "$HOME/.dotfiles/private/aliases.bash";
 fi
 
+
 if [ -f "$HOME/.dotfiles/aliases.bash" ]; then
   . "$HOME/.dotfiles/aliases.bash";
 fi
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

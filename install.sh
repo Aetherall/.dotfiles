@@ -11,8 +11,28 @@ sudo apt -y install vim git curl \
   python3 libegl1-mesa-dev gzip \
   apt-transport-https ca-certificates \
   curl gnupg lsb-release zsh
-
+  
+echo "installing VS Code"
 sudo snap install --classic code
+
+echo "installing Jetbrain Datagrip"
+sudo snap install datagrip --classic
+
+echo "installing Slack"
+sudo snap install slack --classic
+
+echo "installing GitKraken"
+sudo snap install gitkraken --classic
+
+echo "enable Snap parallel instances"
+sudo snap set system experimental.parallel-instances=true
+
+echo "install bitwaden Gojob"
+sudo snap install bitwarden bitwarden_gojob
+
+echo "install bitwarden Perso"
+sudo snap install bitwarden bitwarden_perso
+
 
 rm -rf ~/Templates
 #rm -rf ~/Desktop
@@ -89,3 +109,35 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 echo "installing helmenv helm version manager"
 git clone https://github.com/alexppg/helmenv.git ~/.local/share/helm
+
+echo "installing Filezilla"
+sudo apt install filezilla
+
+echo "installing Notion Enhanced"
+echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list\
+sudo apt install notion-app-enhanced
+
+echo "installing Flameshot screenshot"
+sudo apt install flameshot
+
+echo "installing Gnome Tweaks"
+sudo apt install gnome-tweaks
+
+echo "installing Android Tools"
+sudo apt-get install android-tools-adb android-tools-fastboot
+
+echo "installing qBitorrent"
+sudo apt install qbittorrent
+
+echo "installing Gparted"
+sudo apt install gparted
+
+echo "installing Google Chrome"
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+echo "installing Ghostscript"
+sudo apt install ghostscript
+
+echo "installing yarn"
+nvm install --global yarn
