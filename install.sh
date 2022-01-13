@@ -117,7 +117,7 @@ echo "installing Filezilla"
 sudo apt install filezilla
 
 echo "installing Notion Enhanced"
-echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list\
+echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 sudo apt update
 sudo apt install notion-app-enhanced
 
@@ -139,6 +139,7 @@ sudo apt install gparted
 echo "installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm -f google-chrome-stable_current_amd64.deb
 
 echo "installing Ghostscript"
 sudo apt install ghostscript

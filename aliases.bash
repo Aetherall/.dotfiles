@@ -22,3 +22,36 @@ translate() {
   echo "$source -> $target :"
   echo $translation
 }
+
+
+#ZSH
+alias refresh="source ~/.dotfiles/zsh/.zshrc"
+alias cl="clear"
+alias zshrc="code ~/.dotfiles/aliases.bash"
+alias zshrc-private="code ~/.dotfiles/private/aliases.bash"
+
+# Alias CD
+alias gojob="cd ~/gojob"
+alias cs="cd ~/gojob/clic-and-staff/"
+alias home="cd ~/"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+#Deepshit
+alias ghost="echo gs -sDEVICE=txtwrite -o .txt .pdf"
+
+
+# git
+alias gc="git commit -m"
+alias gco="git checkout"
+alias gp="git push origin HEAD"
+alias gp-f="git push -f origin HEAD"
+alias gl="git pull"
+alias gst="git status"	
+alias ga="git add"
+alias gcln="git clone"
+alias glo="git log"
+
+#Deepshit
+alias ghost="echo gs -sDEVICE=txtwrite -o .txt .pdf"
