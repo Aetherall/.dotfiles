@@ -24,6 +24,9 @@ sudo snap install slack --classic
 echo "installing GitKraken"
 sudo snap install gitkraken --classic
 
+echo "installing Discord"
+sudo snap install discord --classic
+
 echo "enable Snap parallel instances"
 sudo snap set system experimental.parallel-instances=true
 
@@ -115,6 +118,7 @@ sudo apt install filezilla
 
 echo "installing Notion Enhanced"
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list\
+sudo apt update
 sudo apt install notion-app-enhanced
 
 echo "installing Flameshot screenshot"
@@ -141,3 +145,6 @@ sudo apt install ghostscript
 
 echo "installing yarn"
 nvm install --global yarn
+
+echo "delet usless software"
+sudo apt remove --purge thunderbird
