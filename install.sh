@@ -36,6 +36,8 @@ sudo snap install bitwarden bitwarden_gojob
 echo "install bitwarden Perso"
 sudo snap install bitwarden bitwarden_perso
 
+echo "install Figma Linux unofficial client"
+sudo snap install figma-linux
 
 rm -rf ~/Templates
 #rm -rf ~/Desktop
@@ -149,3 +151,9 @@ nvm install --global yarn
 
 echo "delet usless software"
 sudo apt remove --purge thunderbird
+
+#must be at the end of the script
+echo "installing Vimix Grub Theme"
+cd ~/.dotfiles/Vimix-1080p
+sudo bash ./install.sh
+cd ~/.dotfiles/

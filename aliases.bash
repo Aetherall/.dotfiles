@@ -8,6 +8,7 @@
 # - create a free account at https://www.deepl.com/pro-api?cta=checkout-pro#api-pricing
 # - retrieve your api key
 # - run: `echo "DEEPL_FREE_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:xx" >> ~/.dotfiles/private/.env`
+
 translate() {
   url="https://api-free.deepl.com/v2/translate"
   key=$DEEPL_FREE_API_KEY
