@@ -41,6 +41,7 @@ alias ....="cd ../../.."
 
 #Deepshit
 alias ghost="echo gs -sDEVICE=txtwrite -o .txt .pdf"
+alias update="sudo apt -y update && sudo apt -y full-upgrade"
 
 
 # git

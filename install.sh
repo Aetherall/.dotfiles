@@ -130,7 +130,7 @@ echo "installing Gnome Tweaks"
 sudo apt install gnome-tweaks
 
 echo "installing Android Tools"
-sudo apt-get install android-tools-adb android-tools-fastboot
+sudo apt install android-tools-adb android-tools-fastboot
 
 echo "installing qBitorrent"
 sudo apt install qbittorrent
