@@ -146,8 +146,13 @@ rm -f google-chrome-stable_current_amd64.deb
 echo "installing Ghostscript"
 sudo apt install ghostscript
 
+echo "installing npm"
+sudo apt install npm
+sudo npm install -g npm
+
 echo "installing yarn"
 nvm install --global yarn
+sudo npm install -g yarn
 
 echo "delet usless software"
 sudo apt remove --purge thunderbird

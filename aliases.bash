@@ -38,6 +38,7 @@ alias home="cd ~/"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias dotfiles="cd ~/.dotfiles"
 
 #Deepshit
 alias ghost="echo gs -sDEVICE=txtwrite -o .txt .pdf"
@@ -54,6 +55,8 @@ alias gst="git status"
 alias ga="git add"
 alias gcln="git clone"
 alias glo="git log"
+#alias git recommit="git commit -sma --amend --no-edit"
+#alias git rephrase ="commit --amend -sm"
 
 #Deepshit
 alias ghost="echo gs -sDEVICE=txtwrite -o .txt .pdf"
