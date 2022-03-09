@@ -1,0 +1,34 @@
+[user]
+	email = axel@gojob.com
+	name = Axel
+	signingKey = 75EED290A5ABA5B4C1FADE5FB3D82BB9EDE78E07
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = master
+[branch]
+	remote = origin
+	merge = refs/heads/main
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	editor = code --wait
+[help]
+  autocorrect = 20
+[push]
+  default = current
+[pull]
+  rebase = true
+[color]
+  ui = true
+[pager]
+  status = false
+[alias]
+  recommit = commit -sma --amend --no-edit
+  rephrase = commit --amend -sm

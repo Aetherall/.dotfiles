@@ -30,6 +30,7 @@ alias refresh="source ~/.dotfiles/zsh/.zshrc"
 alias cl="clear"
 alias zshrc="code ~/.dotfiles/aliases.bash"
 alias zshrc-private="code ~/.dotfiles/private/aliases.bash"
+alias history="code ~/.dotfiles/zsh/.zsh_history"
 
 # Alias CD
 alias gojob="cd ~/gojob"

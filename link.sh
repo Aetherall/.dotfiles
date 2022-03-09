@@ -22,6 +22,10 @@ ln -s ~/.dotfiles/zsh ~/.config/zsh
 rm -rf ~/.zshenv || true
 ln -s ~/.dotfiles/zsh/.zshenv ~/.zshenv
 
+# Gitconfig
+rm -rf ~/.gitconfig || true
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+
 # VIM
 rm -rf ~/.config/vim || true
 ln -s ~/.dotfiles/vim ~/.config/vim
@@ -51,3 +55,7 @@ if [ -d "$HOME/.mozilla" ] ; then
     mv ~/.mozilla ~/.config/mozilla
     ln -s ~/.config/mozilla ~/.mozilla
 fi
+
+# Allow VS Code to be started from shell command (to edit config files by default for exemple)"
+rm -rf /usr/bin/code || true
+sudo ln -s /snap/code/current/usr/share/code/bin/code /usr/local/bin/code

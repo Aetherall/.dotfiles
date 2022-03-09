@@ -157,8 +157,18 @@ sudo npm install -g yarn
 echo "delet usless software"
 sudo apt remove --purge thunderbird
 
-#must be at the end of the script
+echo "use VS Code as default configs files editor"
+rm -f /usr/bin/code
+sudo ln -s /snap/code/current/usr/share/code/bin/code /usr/local/bin/code
+
+echo "Increase the maximum capacity of files listened needed to start any big project locally (like HRIS)"
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p\
+
 echo "installing Vimix Grub Theme"
 cd ~/.dotfiles/Vimix-1080p
 sudo bash ./install.sh
 cd ~/.dotfiles/
+
+echo "Connect to GCP cluster"
+gcloud container clusters get-credentials review5 --region=europe-west1
+gcloud config set project gojob-v2
